@@ -18,7 +18,7 @@ installed, you can set up the project by running
 
 ### Develop
 
-    yarn run serve
+    yarn serve
 
 This does a quick site compilation in debug mode and starts a local
 server. The server will detect source changes and rebuild, so edits
@@ -26,7 +26,7 @@ will be visible immediately after saving in your editor.
 
 ### Deploy
 
-    yarn run build
+    yarn build
 
 This compiles and minifies the site for production deployment.
 Files in the resulting `dist` directory can by copied to a
@@ -42,11 +42,11 @@ the volume map argument.
 
 ### Report and fix style lints
 
-    yarn run lint
+    yarn lint
 
 ### Run unit tests
 
-    yarn run test:unit
+    yarn test:unit
 
 The project doesn't currently have tests.
 
