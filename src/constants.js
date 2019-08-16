@@ -16,6 +16,7 @@ export const URN_ODYSSEY = 'urn:cts:greekLit:tlg0012.tlg002.perseus-grc2';
 export const CDLI_FETCH_URN = 'cdliFetchUrn';
 export const CDLI_FETCH_INDEX = 'cdliFetchIndex';
 export const CDLI_SET_INDEX = 'cdliSetIndex';
+export const CDLI_SET_REFERENCE = 'cdliSetReference';
 export const SET_TRANSLATION_TEXT = 'setTranslationText';
 
 export const URN_CDLI_BASE = 'urn:cts:cdli';

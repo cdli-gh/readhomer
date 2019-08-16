@@ -12,6 +12,7 @@ import {
   CDLI_FETCH_URN,
   CDLI_FETCH_INDEX,
   CDLI_SET_INDEX,
+  CDLI_SET_REFERENCE,
 } from './constants';
 
 import cards from './homer';
@@ -85,6 +86,9 @@ export default function createStore() {
         state.selectedCard = card;
         state.selectedReference = `${urn}:${card}`;
         state.selectedBaseUrn = urn;
+      },
+      [CDLI_SET_REFERENCE]: (state, urn) => {
+        state.selectedReference = urn;
       },
       [CDLI_SET_INDEX]: (state, works) => {
         state.works = works;
@@ -160,6 +164,7 @@ export default function createStore() {
               .map((line, index) => [line.getAttribute('n') || index, line.textContent]);
             commit(SET_PASSAGE_TEXT, lines);
             commit(SET_TRANSLATION_TEXT, translation);
+            commit(CDLI_SET_REFERENCE, urn);
           });
       },
       [CDLI_FETCH_INDEX]: ({ commit }) => {
