@@ -36,7 +36,9 @@ export default {
       this.lookupFromStore = lookupFromStore;
     },
     onLookup(reference) {
-      const urn = `urn:cts:cdli:test.${reference}`;
+      // Just look for a P-number, ignore interior references.
+      const code = reference.trim();
+      const urn = `urn:cts:cdli:${code}.${code}`;
       this.$store.dispatch(CDLI_FETCH_URN, { urn });
     },
     switchText() {
